@@ -6,7 +6,7 @@ exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 # Avoid tiling latte panel components
-for_window [title="Latte Dock"] floating enable;
+# for_window [title="Latte Dock"] floating enable;
 
 # Avoid tiling popups, dropdown windows from plasma
 for_window [class="plasmashell"] floating enable
@@ -26,7 +26,6 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_role="About"] floating enable 
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
-for_window [title="Android Emulator"] floating enable #android emulator
 
 #****************************************************************************
 
@@ -61,10 +60,10 @@ bindsym $mod+Return exec konsole
 bindsym $mod+Shift+q kill
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -213,12 +212,20 @@ bindsym $mod+n exec --no-startup-id flash_window
 
 #********************************************************************************
 
-exec --no-startup-id feh --bg-scale ~/Pictures/vaporB.jpg
-exec --no-startup-id compton --config /home/muriel/.compton.conf
-exec --no-startup-id ~/.scripts/feh-blur
-exec --no-startup-id ~/.scripts/feh-blur
-exec --no-startup-id flashfocus
-#exec --no-startup-id conky -c ~/.config/conky/conkyrc
+exec --no-startup-id feh --bg-scale ~/Pictures/vaporB.jpg    #Set the wallpaper
+exec --no-startup-id compton # --config ~/config/.compton.conf #Inicialize Compton and config file
+exec --no-startup-id ~/.scripts/feh-blur                     #Script for blur Background
+exec_always --no-startup-id flashfocus                              #Tool for flash focus window
+
+
+#********************************************************************************
+
+#     Scripts
+
+#********************************************************************************
+# exec xautolock -time 5-locker "~/.scripts/scrlock.sh"
+bindsym $mod+l exec ~/.scripts/scrlock.sh   #Script for GLitch ScreenLock
+bindsym $mod+p exec ~/.scripts/second-screen.sh   #Script for config second monitor
 
 #********************************************************************************
 
@@ -252,8 +259,10 @@ bindsym $mod+i border normal
 #############################
 
 # Set inner/outer gaps
-gaps inner 15
-gaps outer 5
+#gaps inner 15
+#gaps outer 5
 
+gaps inner 5
+gaps outer 5
 # Activate smart borders (always)
 smart_borders on
