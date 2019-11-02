@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=i3 + Plasma
+Comment=Customizado por Matheus Muriel
+Exec=/usr/bin/i3-kde-session
+TryExec=/usr/bin/i3-kde-session
+Type=Application
+X-LightDM-DesktopName=KDE Plasma + i3
+DesktopNames=KDE

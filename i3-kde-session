@@ -1,4 +1,4 @@
 #!/bin/sh
 # Run KDE with i3 as its window manager
 export KDEWM="/usr/bin/i3"
-exec startkde "$@"
+exec startplasma-x11 "$@"
