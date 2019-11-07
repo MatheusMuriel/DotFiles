@@ -26,7 +26,8 @@ Baseado nos dotfiles do [WillPower](https://github.com/WillPower3309/dotfiles/)
 ## Arquivos
 - ~/.config/.compton.conf
 - ~/.config/i3/config
-- ~/.config/.i3status.conf
+- ~/.config/i3/i3status.conf
+- ~/.config/polybar/config
 - ~/.config/rofi/config.rasi
 - ~/.config/rofi/config.rasiclear
 - ~/.scripts/scrlock.sh

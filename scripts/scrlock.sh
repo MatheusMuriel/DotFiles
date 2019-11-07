@@ -11,7 +11,7 @@ scrot -z $pngfile
 magick convert -rotate 90 $pngfile $bmpfile
 
 
-for a in {1,2,4,5,10}
+  for a in {1,2,4}
 do
     # Glitch it with sox FROM: https://maryknize.com/blog/glitch_art_with_sox_imagemagick_and_vim/
     sox -t ul -c 1 -r 48k $bmpfile -t ul $glitchedfile trim 0 90s : echo 1 1 $((a*2)) 0.1
